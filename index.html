@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Infoniel JKT48 — Download APK</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy-950:#070e1c;
+    --navy-900:#0a1628;
+    --navy-800:#101f35;
+    --navy-700:#182b46;
+    --navy-600:#26405f;
+    --ink-100:#f4f8fc;
+    --ink-300:#c3d0e0;
+    --ink-500:#7f92aa;
+    --sky:#38bcea;
+    --sky-bright:#6fd7fb;
+    --live:#ff4d6d;
+    --radius-lg:28px;
+    --radius-md:16px;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:
+      radial-gradient(1100px 600px at 82% -8%, rgba(56,188,234,.16), transparent 60%),
+      radial-gradient(900px 500px at -10% 15%, rgba(56,188,234,.10), transparent 55%),
+      var(--navy-900);
+    color:var(--ink-100);
+    font-family:'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  .display{ font-family:'Bebas Neue', 'Plus Jakarta Sans', sans-serif; letter-spacing:.03em; }
+  a{ color:inherit; }
+  .wrap{ max-width:1080px; margin:0 auto; padding:0 24px; }
+
+  /* ---------- NAV ---------- */
+  nav{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:22px 24px; max-width:1080px; margin:0 auto;
+  }
+  .brand{ display:flex; align-items:center; gap:10px; }
+  .brand-mark{
+    width:34px; height:34px; border-radius:10px;
+    background:linear-gradient(155deg, var(--navy-700), var(--navy-900));
+    border:1px solid var(--navy-600);
+    display:flex; align-items:center; justify-content:center;
+    font-family:'Bebas Neue', sans-serif; font-size:16px; color:var(--sky-bright);
+  }
+  .brand-name{ font-weight:700; font-size:15px; letter-spacing:.02em; }
+  .brand-tag{ color:var(--ink-500); font-size:12px; }
+  .nav-ver{
+    font-size:12px; color:var(--ink-500);
+    border:1px solid var(--navy-600); padding:6px 12px; border-radius:99px;
+  }
+
+  /* ---------- HERO ---------- */
+  .hero{
+    display:grid; grid-template-columns:1.15fr .85fr; gap:48px;
+    align-items:center; padding:56px 0 64px;
+  }
+  .hero.hero-solo{
+    grid-template-columns:1fr; padding:64px 0 56px; text-align:center;
+  }
+  .hero-solo .hero-desc{ margin-left:auto; margin-right:auto; }
+  .hero-solo .hero-cta{ justify-content:center; }
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:8px;
+    font-size:12.5px; font-weight:700; letter-spacing:.14em; text-transform:uppercase;
+    color:var(--sky-bright); margin-bottom:18px;
+  }
+  .live-dot{
+    width:8px; height:8px; border-radius:50%; background:var(--live);
+    box-shadow:0 0 0 0 rgba(255,77,109,.6);
+    animation:pulse 1.8s infinite;
+  }
+  @keyframes pulse{
+    0%{ box-shadow:0 0 0 0 rgba(255,77,109,.55); }
+    70%{ box-shadow:0 0 0 9px rgba(255,77,109,0); }
+    100%{ box-shadow:0 0 0 0 rgba(255,77,109,0); }
+  }
+  h1{
+    font-size:clamp(42px, 6.4vw, 68px);
+    line-height:.96;
+    text-transform:uppercase;
+    color:var(--ink-100);
+  }
+  h1 span{ color:var(--sky); }
+  .hero-desc{
+    margin-top:18px; color:var(--ink-300); font-size:16.5px; max-width:46ch;
+  }
+  .hero-cta{ margin-top:32px; display:flex; align-items:center; gap:16px; flex-wrap:wrap; }
+  .btn-download{
+    display:inline-flex; align-items:center; gap:10px;
+    background:linear-gradient(180deg, var(--sky-bright), var(--sky));
+    color:var(--navy-950); font-weight:800; font-size:15.5px;
+    padding:16px 26px; border-radius:14px; text-decoration:none;
+    box-shadow:0 14px 30px -12px rgba(56,188,234,.55);
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .btn-download:hover{ transform:translateY(-2px); box-shadow:0 18px 34px -12px rgba(56,188,234,.7); }
+  .btn-download:focus-visible{ outline:2px solid var(--sky-bright); outline-offset:3px; }
+  .hero-meta{ font-size:12.5px; color:var(--ink-500); }
+  .hero-meta b{ color:var(--ink-300); font-weight:600; }
+
+  /* ---------- FEATURES ---------- */
+  section{ padding:8px 0 64px; }
+  .section-head{ margin-bottom:28px; }
+  .section-eyebrow{
+    font-size:12px; font-weight:700; letter-spacing:.14em; text-transform:uppercase;
+    color:var(--ink-500); margin-bottom:8px;
+  }
+  h2{ font-size:clamp(26px, 3.4vw, 34px); text-transform:uppercase; }
+  .feature-grid{
+    display:grid; grid-template-columns:repeat(4, 1fr); gap:14px;
+  }
+  .feature-card{
+    background:var(--navy-800); border:1px solid var(--navy-700);
+    border-radius:var(--radius-md); padding:22px 18px;
+  }
+  .feature-icon{
+    width:38px; height:38px; border-radius:11px;
+    background:rgba(56,188,234,.12); border:1px solid rgba(56,188,234,.3);
+    display:flex; align-items:center; justify-content:center; margin-bottom:14px;
+  }
+  .feature-icon svg{ width:19px; height:19px; stroke:var(--sky-bright); }
+  .feature-card h3{ font-size:15px; margin-bottom:6px; }
+  .feature-card p{ font-size:13px; color:var(--ink-500); line-height:1.5; }
+
+  /* ---------- INSTALL STEPS ---------- */
+  .steps{
+    display:grid; grid-template-columns:repeat(3, 1fr); gap:16px;
+  }
+  .step{
+    background:var(--navy-800); border:1px solid var(--navy-700);
+    border-radius:var(--radius-md); padding:24px 20px; position:relative;
+  }
+  .step-num{
+    font-family:'Bebas Neue', sans-serif; font-size:34px; color:var(--navy-600);
+    line-height:1; margin-bottom:10px;
+  }
+  .step h3{ font-size:15px; margin-bottom:8px; }
+  .step p{ font-size:13px; color:var(--ink-500); }
+
+  .warn{
+    margin-top:20px; display:flex; gap:12px; align-items:flex-start;
+    background:rgba(56,188,234,.06); border:1px solid rgba(56,188,234,.22);
+    border-radius:var(--radius-md); padding:16px 18px;
+    font-size:13px; color:var(--ink-300);
+  }
+  .warn svg{ flex-shrink:0; width:18px; height:18px; stroke:var(--sky-bright); margin-top:1px; }
+
+  /* ---------- FOOTER ---------- */
+  footer{
+    border-top:1px solid var(--navy-700); padding:28px 0 40px;
+    display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;
+  }
+  footer p{ font-size:12.5px; color:var(--ink-500); }
+
+  @media (max-width:760px){
+    .hero{ grid-template-columns:1fr; padding-top:32px; }
+    .feature-grid{ grid-template-columns:repeat(2, 1fr); }
+    .steps{ grid-template-columns:1fr; }
+    nav{ padding:18px 20px; }
+  }
+  @media (prefers-reduced-motion: reduce){
+    .live-dot{ animation:none; }
+    .btn-download{ transition:none; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="brand">
+    <div class="brand-mark"><img src="data:image/png;base64,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" alt="Infoniel JKT48" style="width:100%;height:100%;object-fit:cover;border-radius:10px"></div>
+    <div>
+      <div class="brand-name">INFONIEL JKT48</div>
+      <div class="brand-tag">Fan app · Cornelia Vanisa</div>
+    </div>
+  </div>
+  <div class="nav-ver">v1.12 · Android</div>
+</nav>
+
+<div class="wrap">
+  <section class="hero hero-solo">
+    <div>
+      <div class="eyebrow"><span class="live-dot"></span> Update real-time, gak pake ketinggalan</div>
+      <h1>Pantau <span>Oniel</span><br>Kapan Aja,<br>Di Mana Aja</h1>
+      <p class="hero-desc">
+        Notifikasi live IDN, video TikTok terbaru, jadwal Showroom, sampai jadwal Theater —
+        semua soal Cornelia Vanisa JKT48 dalam satu aplikasi Android.
+      </p>
+      <div class="hero-cta">
+        <a href="#" id="downloadBtn" class="btn-download" download>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 3v13"/><path d="m7 11 5 5 5-5"/><path d="M5 21h14"/>
+          </svg>
+          Download APK
+        </a>
+        <div class="hero-meta">Android 8.0+ &nbsp;·&nbsp; <b>2.2MB</b> &nbsp;·&nbsp; Gratis</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="fitur">
+    <div class="section-head">
+      <div class="section-eyebrow">Di dalam aplikasi</div>
+      <h2>4 Hal yang Dipantau</h2>
+    </div>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+        </div>
+        <h3>TikTok</h3>
+        <p>Notif otomatis begitu ada video baru dari Oniel.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 5V3M12 21v-2M5 12H3M21 12h-2"/></svg>
+        </div>
+        <h3>IDN Live</h3>
+        <p>Notif real-time saat live dimulai, plus riwayat sesi sebelumnya.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 8 9 5 9-5"/></svg>
+        </div>
+        <h3>Showroom</h3>
+        <p>Gak ketinggalan sesi Showroom kapan pun dia siaran.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/></svg>
+        </div>
+        <h3>Jadwal Theater</h3>
+        <p>Cek jadwal pentas theater JKT48 langsung dari aplikasi.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="install">
+    <div class="section-head">
+      <div class="section-eyebrow">Sebelum mulai</div>
+      <h2>Cara Install</h2>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">01</div>
+        <h3>Download file APK</h3>
+        <p>Tekan tombol "Download APK" di atas, tunggu sampai selesai kedownload.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <h3>Izinkan sumber tidak dikenal</h3>
+        <p>Kalau muncul peringatan, buka Settings → izinkan install dari sumber ini (cuma sekali).</p>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <h3>Install &amp; buka</h3>
+        <p>Tekan Install, buka aplikasinya, lalu aktifkan izin notifikasi supaya update-nya jalan.</p>
+      </div>
+    </div>
+
+    <div class="warn">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v5"/><path d="M12 16h.01"/></svg>
+      <div>
+        File ini di luar Google Play Store, jadi Android akan menampilkan peringatan standar
+        "sumber tidak dikenal" — ini normal untuk APK yang dibagikan langsung, bukan tanda file berbahaya.
+        Aplikasi ini dibuat oleh fan, tidak berafiliasi resmi dengan JKT48 atau manajemennya.
+      </div>
+    </div>
+  </section>
+</div>
+
+<footer>
+  <div class="wrap" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; width:100%;">
+    <p>Dibuat oleh fan, untuk fan. Bukan aplikasi resmi JKT48.</p>
+    <p>© 2026 Infoniel JKT48</p>
+  </div>
+</footer>
+
+<script>
+  // ⚠️ GANTI URL DI BAWAH INI dengan link langsung ke file APK kamu
+  // (contoh: link GitHub Releases, Firebase Hosting, atau hosting sendiri).
+  // Google Drive/Dropbox biasa TIDAK bisa dipakai langsung — harus versi "direct download link".
+  const APK_URL = "https://github.com/infoliveoniel1957/infonieljkt48_appapk/releases/download/v1.12/INFONIEL-JKT48.apk";
+
+  document.getElementById('downloadBtn').setAttribute('href', APK_URL);
+</script>
+
+</body>
+</html>
